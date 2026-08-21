@@ -272,3 +272,49 @@ h1 em, h2 em { color: var(--lime); font-style: normal; }
 @media (max-width: 900px) {
   .hero-title { white-space: normal; }
 }
+
+/* brighter page rhythm */
+:root {
+  --ink: #0b1020;
+  --ink-soft: #111832;
+  --paper: #f8f8f2;
+  --muted: #b2b7ce;
+  --quiet: #727a9a;
+  --line: rgba(244,243,237,.18);
+  --line-soft: rgba(244,243,237,.11);
+}
+body { background: var(--ink); }
+.manifesto, .tool-section, .closing, .site-footer { background: linear-gradient(180deg, rgba(23,31,69,.42), rgba(11,16,32,0)); }
+.signal-section { background: linear-gradient(135deg, #17234e, #111a3a 62%, #151d42); }
+.inner-page { background: radial-gradient(circle at 70% 12%, rgba(51,65,135,.3), transparent 42%), var(--ink); }
+.note-card, .note-list-card { background: linear-gradient(135deg, rgba(111,123,255,.12), rgba(255,255,255,.035)); }
+.tool-row { animation: content-rise .75s cubic-bezier(.2,.75,.25,1) both; animation-delay: var(--row-delay, 0ms); }
+.note-list-card { animation: content-rise .75s cubic-bezier(.2,.75,.25,1) both; }
+.notes-grid .note-list-card:nth-child(2) { animation-delay: 100ms; }
+.notes-grid .note-list-card:nth-child(3) { animation-delay: 200ms; }
+.about-stats strong, .about-stats p { animation: content-rise .75s cubic-bezier(.2,.75,.25,1) both; }
+.about-stats p:nth-of-type(1) { animation-delay: 100ms; }
+.about-stats strong:nth-of-type(2) { animation-delay: 180ms; }
+.about-stats p:nth-of-type(2) { animation-delay: 260ms; }
+.contact-layout form label:nth-child(1) { animation-delay: 0ms; }
+.contact-layout form label:nth-child(2) { animation-delay: 90ms; }
+.contact-layout form label:nth-child(3) { animation-delay: 180ms; }
+.contact-layout form label { animation: content-rise .7s cubic-bezier(.2,.75,.25,1) both; }
+
+@media (min-width: 901px) {
+  .hero-visual { right: 2%; width: min(44vw, 680px); }
+}
+
+@media (max-width: 900px) {
+  .hero-visual { right: 0; }
+}
+
+@media (max-width: 600px) {
+  .hero-visual { right: -5%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-row, .note-list-card, .about-stats strong, .about-stats p, .contact-layout form label { animation: none; }
+}
+
+@keyframes content-rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }

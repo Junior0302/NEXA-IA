@@ -1,4 +1,4 @@
-export function Link({ to, children, className = "", onNavigate }: { to: string; children: React.ReactNode; className?: string; onNavigate?: () => void }) {
+export function Link({ to, children, className = "", onNavigate, style }: { to: string; children: React.ReactNode; className?: string; onNavigate?: () => void; style?: React.CSSProperties }) {
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const isModifiedClick = event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
     if (to.startsWith("/") && !isModifiedClick) {
@@ -11,5 +11,5 @@ export function Link({ to, children, className = "", onNavigate }: { to: string;
     onNavigate?.();
   };
   const href = to === "/" || !to.startsWith("/") ? to : `${to.replace(/\/+$/, "")}/`;
-  return <a href={href} className={className} onClick={handleClick}>{children}</a>;
+  return <a href={href} className={className} style={style} onClick={handleClick}>{children}</a>;
 }

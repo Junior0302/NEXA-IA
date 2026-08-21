@@ -66,7 +66,7 @@ function HomePage() {
 
     <section className="tool-section content-wrap section-space" id="tools">
       <div className="section-heading"><Reveal className="section-index">02 / LA BOÎTE À OUTILS</Reveal><Reveal delay={80}><h2>Trouvez votre <em>avantage.</em></h2></Reveal></div>
-      <div className="tool-list">{toolsets.map((tool) => <ToolRow key={tool.number} {...tool} />)}</div>
+      <div className="tool-list">{toolsets.map((tool, index) => <ToolRow key={tool.number} delay={index * 80} {...tool} />)}</div>
       <Reveal className="section-foot" delay={100}><span>Mis à jour pour accompagner l&apos;évolution du travail.</span><Link to="/tools" className="under-link">Voir toute la boîte à outils <span>↗</span></Link></Reveal>
     </section>
 
@@ -76,8 +76,8 @@ function HomePage() {
   </>;
 }
 
-function ToolRow({ number, name, detail, tags, tone }: { number: string; name: string; detail: string; tags: string[]; tone: string }) {
-  return <Link to="/tools" className={`tool-row tool-${tone}`} data-cursor="OUVRIR"><span className="tool-number">{number}</span><div className="tool-name"><h3>{name}</h3><p>{detail}</p></div><div className="tool-tags">{tags.map((tag) => <Tag key={tag} tone={tone}>{tag}</Tag>)}</div><span className="tool-arrow">↗</span></Link>;
+function ToolRow({ number, name, detail, tags, tone, delay = 0 }: { number: string; name: string; detail: string; tags: string[]; tone: string; delay?: number }) {
+  return <Link to="/tools" className={`tool-row tool-${tone}`} style={{ "--row-delay": `${delay}ms` } as CSSProperties} data-cursor="OUVRIR"><span className="tool-number">{number}</span><div className="tool-name"><h3>{name}</h3><p>{detail}</p></div><div className="tool-tags">{tags.map((tag) => <Tag key={tag} tone={tone}>{tag}</Tag>)}</div><span className="tool-arrow">↗</span></Link>;
 }
 
 function InnerPage({ eyebrow, title, description, children }: { eyebrow: string; title: ReactNode; description: string; children: ReactNode }) {
@@ -85,7 +85,7 @@ function InnerPage({ eyebrow, title, description, children }: { eyebrow: string;
 }
 
 function ToolsPage() {
-  return <InnerPage eyebrow="BOÎTE À OUTILS / 02" title={<>LA BOÎTE<br /><em>À OUTILS.</em></>} description="Une carte pratique des modèles, méthodes et petits systèmes qui méritent vraiment votre temps."><section className="inner-tools content-wrap">{toolsets.map((tool) => <ToolRow key={tool.number} {...tool} />)}</section><section className="tools-quote content-wrap"><span>LA RÈGLE</span><p>Commencez par le problème, pas par l&apos;outil.</p></section></InnerPage>;
+  return <InnerPage eyebrow="BOÎTE À OUTILS / 02" title={<>LA BOÎTE<br /><em>À OUTILS.</em></>} description="Une carte pratique des modèles, méthodes et petits systèmes qui méritent vraiment votre temps."><section className="inner-tools content-wrap">{toolsets.map((tool, index) => <ToolRow key={tool.number} delay={index * 80} {...tool} />)}</section><section className="tools-quote content-wrap"><span>LA RÈGLE</span><p>Commencez par le problème, pas par l&apos;outil.</p></section></InnerPage>;
 }
 
 function NotesPage() {
