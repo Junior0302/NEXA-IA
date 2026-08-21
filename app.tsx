@@ -64,10 +64,10 @@ function HomePage() {
     <section className="ai-hero" id="top">
       <div className="hero-noise" />
       <div className="hero-copy content-wrap">
-        <Reveal className="eyebrow"><span className="eyebrow-dot" />INTELLIGENCE ARTIFICIELLE INDÉPENDANTE</Reveal>
-        <Reveal delay={80}><h1>RENDEZ L&apos;IA<br /><em>UTILE.</em></h1></Reveal>
-        <Reveal className="hero-sub" delay={160}><p>Une pensée claire pour un monde en mouvement.<br />Outils, systèmes et signaux pour celles et ceux qui construisent.</p></Reveal>
-        <Reveal delay={220}><Link to="/tools" className="lime-button" data-cursor="EXPLORER">Explorer la boîte à outils <span>↗</span></Link></Reveal>
+        <Reveal className="hero-kicker eyebrow"><span className="eyebrow-dot" />INTELLIGENCE ARTIFICIELLE INDÉPENDANTE</Reveal>
+        <Reveal className="hero-title-reveal" delay={80}><h1 id="hero-title" className="hero-title">RENDEZ L&apos;IA<br /><em>UTILE.</em></h1></Reveal>
+        <Reveal className="hero-lead" delay={160}><p>Une pensée claire pour un monde en mouvement.<br />Outils, systèmes et signaux pour celles et ceux qui construisent.</p></Reveal>
+        <Reveal className="hero-action" delay={220}><Link to="/tools" className="lime-button" data-cursor="EXPLORER">Explorer la boîte à outils <span>↗</span></Link></Reveal>
       </div>
       <div className="hero-visual"><div className="visual-halo" /><OrbitalPanel /><div className="hero-robot"><RobotScene {...robotSettings} /></div><div className="visual-caption"><span>OBJET 001</span><span>CURIEUX PAR DÉFAUT</span></div></div>
       <div className="hero-stamp">IA<br /><span>EST UNE<br />MATIÈRE</span></div>
