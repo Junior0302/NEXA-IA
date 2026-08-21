@@ -10,7 +10,7 @@
     },
     {
       "path": "app.tsx",
-      "hash": "502a88d08461475d5f5cb877d63e3ac6509af5acd6287d6d56fb86d12c1f9cdd"
+      "hash": "2dece9a71a5787fc631d9180f8e7d8a9d1b9c7adfee3ebbe918c54684473e792"
     },
     {
       "path": "assets/fonts/QurovaDEMO-Bold.otf",
@@ -33,6 +33,18 @@
       "hash": "dfc4e2c14394d714edc3acd15a1786d51d5d051fc34ddb37a3fab0e2ab8ae909"
     },
     {
+      "path": "assets/visuals/flow-field.png",
+      "hash": "057f9e6d3598b474fff73c652242572f60b93a2c10ae77e43157ecb72904aa23"
+    },
+    {
+      "path": "assets/visuals/human-signal.png",
+      "hash": "446822d78ca1e08c93ee1a3fecceeaf9ef1f4f8c3e64c57fa739e7ce5896f79b"
+    },
+    {
+      "path": "assets/visuals/neural-orb.png",
+      "hash": "539e5aef300acf105f2576c7026c31ccd374dc2a97559b7598b2ce276e239079"
+    },
+    {
       "path": "components/ui/magnetic-button.tsx",
       "hash": "2ed97aa7346e68f985aa1a6b95edcda0564f2988d2541b4f48bb4ad3fee18d73"
     },
@@ -46,7 +58,7 @@
     },
     {
       "path": "components/ui/router-link.tsx",
-      "hash": "f1dee30dcf7180f2bf115ac2581dcd7b67287492601e065496692aace9fa9978"
+      "hash": "857697db97b25bd33e0f8db21fad16e9287d3e8da934a545b0ea60192bbfcde0"
     },
     {
       "path": "components/ui/scroll-reveal.tsx",
@@ -58,7 +70,7 @@
     },
     {
       "path": "components/ui/site.tsx",
-      "hash": "b9870b778cdd411d775580f561efaeea0070ca0840000d8497e8f0a0df67a350"
+      "hash": "5e07c7648c3967a689ac624808974959b3509f32f162b6bee3297a9f318dae02"
     },
     {
       "path": "contact/index.html",
@@ -86,7 +98,7 @@
     },
     {
       "path": "styles.css",
-      "hash": "433b8c0e13eff19e831b7cb74a8e3758358555e0dbcede6469a49ab2af2d7b7a"
+      "hash": "5c47f8d725e17de6485adabb9f773e9e0b938fd6aa3ac838c01d825f70832e49"
     },
     {
       "path": "tools/index.html",
@@ -95,6 +107,18 @@
     {
       "path": "uploads/ChatGPT_Image_20_ao_t_2026__20_06_17.png",
       "hash": "296a868d830abfde2985779377a1425163cd517765541bc906de2ad36a9e218c"
+    },
+    {
+      "path": "uploads/image-2.png",
+      "hash": "5e9fdd71b1638a7e833cb1cc97c99a92c348cd9bd1dd528d32aab7adfb3c1865"
+    },
+    {
+      "path": "uploads/image-3.png",
+      "hash": "c6cf42f83998c796890b08a32d4a30620a4d1c5d714b0d54e2659a2c8e715e1d"
+    },
+    {
+      "path": "uploads/image.png",
+      "hash": "93588a43b0070c8773d6aad4cd63f95ed753fc6b9cd99987a1a5fef96420f647"
     },
     {
       "path": "uploads/qurova-demo.zip",

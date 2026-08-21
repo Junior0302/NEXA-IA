@@ -5,8 +5,8 @@ const interactiveSoundSelector = ".lime-button, .under-link, .back-link, .tool-r
 
 export function InteractionSounds() {
   useEffect(() => {
-    const hoverSound = new Audio(new URL("sfx/ui-hover.wav", document.baseURI).href);
-    const clickSound = new Audio(new URL("sfx/ui-click.wav", document.baseURI).href);
+    const hoverSound = new Audio(new URL("../../sfx/ui-hover.wav", import.meta.url).href);
+    const clickSound = new Audio(new URL("../../sfx/ui-click.wav", import.meta.url).href);
     hoverSound.preload = "auto";
     clickSound.preload = "auto";
 
@@ -111,7 +111,7 @@ export function CustomCursor() {
     setEnabled(canUse.matches);
     if (!canUse.matches) return;
     const move = (event: MouseEvent) => { position.current.tx = event.clientX; position.current.ty = event.clientY; };
-    const over = (event: MouseEvent) => { const target = (event.target as HTMLElement).closest("[data-cursor]"); const value = target?.getAttribute("data-cursor") || ""; label.current!.textContent = value; ring.current!.classList.toggle("is-active", Boolean(value)); document.body.classList.toggle("cursor-link", Boolean(target)); };
+    const over = (event: MouseEvent) => { const target = event.target instanceof Element ? event.target.closest("[data-cursor]") : null; const value = target?.getAttribute("data-cursor") || ""; if (label.current) label.current.textContent = value; if (ring.current) ring.current.classList.toggle("is-active", Boolean(value)); document.body.classList.toggle("cursor-link", Boolean(target)); };
     const animate = () => { const p = position.current; p.x += (p.tx - p.x) * .18; p.y += (p.ty - p.y) * .18; if (dot.current) dot.current.style.transform = `translate3d(${p.x}px, ${p.y}px, 0)`; if (ring.current) { position.current.x += (p.tx - p.x) * .08; position.current.y += (p.ty - p.y) * .08; ring.current.style.transform = `translate3d(${position.current.x}px, ${position.current.y}px, 0)`; } frame.current = requestAnimationFrame(animate); };
     window.addEventListener("mousemove", move); document.addEventListener("mouseover", over); frame.current = requestAnimationFrame(animate);
     return () => { window.removeEventListener("mousemove", move); document.removeEventListener("mouseover", over); cancelAnimationFrame(frame.current); };
