@@ -236,3 +236,39 @@ h1 em, h2 em { color: var(--lime); font-style: normal; }
   .scroll-cue { bottom: 19px; gap: 11px; }
   .scroll-cue i { width: 42px; }
 }
+
+/* focused hero refinements */
+.ai-hero { min-height: min(900px, 100svh); background: radial-gradient(circle at 72% 46%, #293268 0, #171c42 28%, var(--ink) 72%); }
+.ai-hero::before { opacity: .19; background-size: 86px 86px; mask-image: linear-gradient(90deg, black 0 58%, transparent 88%); animation: grid-drift 18s linear infinite; }
+.ai-hero::after { position: absolute; top: 12%; right: 2%; width: min(58vw, 820px); height: 82%; border-radius: 50%; background: radial-gradient(circle, rgba(111,123,255,.28), rgba(111,123,255,.08) 38%, transparent 70%); filter: blur(8px); opacity: .8; animation: hero-glow 7s ease-in-out infinite; content: ''; pointer-events: none; }
+.hero-copy { z-index: 3; width: 68%; max-width: none; margin-right: 0; margin-left: 0; padding-top: 92px; padding-bottom: 92px; }
+.hero-title { max-width: 900px; font-size: clamp(76px, 11.5vw, 176px); }
+.hero-visual { z-index: 2; top: 11%; right: 1%; width: min(51vw, 740px); height: 78%; filter: drop-shadow(0 34px 44px rgba(0,0,0,.35)); }
+.hero-visual::before { position: absolute; inset: 4%; border: 1px solid rgba(201,255,69,.18); border-radius: 50%; box-shadow: 0 0 90px rgba(111,123,255,.2), inset 0 0 70px rgba(201,255,69,.05); animation: breathe 6s ease-in-out infinite; content: ''; pointer-events: none; }
+.scroll-cue { display: none; }
+
+@media (max-width: 900px) {
+  .ai-hero { min-height: 820px; }
+  .hero-copy { width: 72%; padding-top: 100px; padding-bottom: 90px; }
+  .hero-visual { top: 42%; right: -4%; width: min(68vw, 520px); height: 54%; }
+}
+
+@media (max-width: 600px) {
+  .ai-hero { min-height: 760px; }
+  .hero-copy { width: 94%; padding-top: 80px; padding-bottom: 60px; }
+  .hero-visual { top: 54%; right: -13%; width: 92vw; height: 43%; opacity: .96; }
+  .hero-visual::before { inset: 8%; }
+}
+
+@keyframes grid-drift { to { background-position: 86px 86px; } }
+@keyframes hero-glow { 50% { transform: scale(1.08); opacity: 1; } }
+
+@media (min-width: 901px) {
+  .hero-copy { width: 74%; }
+  .hero-title { white-space: nowrap; font-size: clamp(72px, 10.5vw, 160px); }
+  .hero-visual { right: -5%; width: min(45vw, 680px); }
+}
+
+@media (max-width: 900px) {
+  .hero-title { white-space: normal; }
+}

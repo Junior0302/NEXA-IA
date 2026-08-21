@@ -57,7 +57,6 @@ function HomePage() {
         <Reveal className="hero-action" delay={220}><Link to="/tools" className="lime-button" data-cursor="EXPLORER">Explorer la boîte à outils <span>↗</span></Link></Reveal>
       </div>
       <div className="hero-visual" role="img" aria-label="Robot NEXA"><RobotScene {...robotSettings} /></div>
-      <div className="scroll-cue" aria-hidden="true"><span>SCROLL</span><i /></div>
     </section>
 
     <section className="manifesto content-wrap section-space">
