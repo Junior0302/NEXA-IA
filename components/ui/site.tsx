@@ -67,7 +67,7 @@ export function LoadingScreen({ visible }: { visible: boolean }) {
 }
 
 export function Header({ onMenu, menuOpen }: { onMenu: () => void; menuOpen: boolean }) {
-  return <header className="site-header"><Link to="/" className="site-logo" data-cursor="ACCUEIL"><b>NEXA</b><span>/ GUIDE DE TERRAIN IA</span></Link><div className="header-actions"><Link to="/contact" className="header-contact">Entamer une conversation <i>↗</i></Link><button className="menu-trigger" onClick={onMenu} aria-label="Ouvrir la navigation" aria-expanded={menuOpen} aria-controls="site-menu"><span /><span /></button></div></header>;
+  return <header className="site-header"><Link to="/" className="site-logo" data-cursor="ACCUEIL" aria-label="NEXA, accueil"><b>NEXA</b></Link><button className="menu-trigger" onClick={onMenu} aria-label="Ouvrir la navigation" aria-expanded={menuOpen} aria-controls="site-menu"><span /><span /></button></header>;
 }
 
 export function FullscreenMenu({ open, onClose, links }: { open: boolean; onClose: () => void; links?: string[][] }) {
