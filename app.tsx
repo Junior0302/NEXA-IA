@@ -1,17 +1,7 @@
 import { StrictMode, useEffect, useRef, useState, type CSSProperties, type FormEvent, type ReactNode } from "react";
 import { createRoot } from "react-dom/client";
-import { RobotScene } from "./components/ui/robot-hero.tsx";
 import { CustomCursor, Footer, FullscreenMenu, Header, InteractionSounds, LoadingScreen, PageTransition } from "./components/ui/site.tsx";
 import { Link } from "./components/ui/router-link.tsx";
-
-const robotSettings = {
-  color: "#d5d9e4",
-  scale: 1.35,
-  pantallaColor: "#c9ff45",
-  pantallaBrillo: 1.4,
-  blinkCycle: 3.8,
-  metalness: 0.15,
-};
 
 const toolsets = [
   { number: "01", name: "DISCUTER / RÉFLÉCHIR", detail: "Systèmes de prompts, méthodes de raisonnement et conversations plus riches.", tags: ["ChatGPT", "Claude", "Perplexity"], tone: "lime" },
@@ -46,19 +36,6 @@ function Tag({ children, tone = "lime" }: { children: ReactNode; tone?: string }
   return <span className={`tag tag-${tone}`}><i />{children}</span>;
 }
 
-function OrbitalPanel() {
-  return <div className="orbital-panel" role="img" aria-label="Moniteur de signaux IA">
-    <div className="orbital-grid" />
-    <div className="orbit orbit-one" /><div className="orbit orbit-two" />
-    <div className="orbit-core"><span>AI</span><i /></div>
-    <div className="signal signal-a"><b />contexte</div>
-    <div className="signal signal-b"><b />raisonnement</div>
-    <div className="signal signal-c"><b />résultat</div>
-    <div className="panel-label">EN DIRECT / 04.28.26</div>
-    <div className="panel-readout"><span>SIGNAL DU MODÈLE</span><strong>98.4</strong><i><b /></i></div>
-  </div>;
-}
-
 function HomePage() {
   return <>
     <section className="ai-hero" id="top">
@@ -69,12 +46,8 @@ function HomePage() {
         <Reveal className="hero-lead" delay={160}><p>Une pensée claire pour un monde en mouvement.<br />Outils, systèmes et signaux pour celles et ceux qui construisent.</p></Reveal>
         <Reveal className="hero-action" delay={220}><Link to="/tools" className="lime-button" data-cursor="EXPLORER">Explorer la boîte à outils <span>↗</span></Link></Reveal>
       </div>
-      <div className="hero-visual"><div className="visual-halo" /><OrbitalPanel /><div className="hero-robot"><RobotScene {...robotSettings} /></div><div className="visual-caption"><span>OBJET 001</span><span>CURIEUX PAR DÉFAUT</span></div></div>
-      <div className="hero-stamp">IA<br /><span>EST UNE<br />MATIÈRE</span></div>
-      <div className="scroll-cue"><span>DÉFILEZ POUR EXPLORER</span><i /></div>
+      <div className="hero-mark" aria-hidden="true"><span>IA</span></div>
     </section>
-
-    <div className="ticker" aria-hidden="true"><div><span>L&apos;IA POUR TOUT LE MONDE</span><b>✳</b><span>MOINS DE HYPE / PLUS D&apos;IMPACT</span><b>✳</b><span>PENSEZ MIEUX. CRÉEZ PLUS VITE.</span><b>✳</b><span>L&apos;IA POUR TOUT LE MONDE</span><b>✳</b></div></div>
 
     <section className="manifesto content-wrap section-space">
       <Reveal className="section-index">01 / L&apos;APPROCHE</Reveal>
