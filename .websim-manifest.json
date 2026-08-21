@@ -1,0 +1,104 @@
+{
+  "files": [
+    {
+      "path": "SETUP.md",
+      "hash": "4393ddfee35d4b1072903209ccd9b767d25f26d3e67533138945e84dd2d629f3"
+    },
+    {
+      "path": "about/index.html",
+      "hash": "b6ce2f9b9197297d1ec141838cecc1816947682af9b47360313e5419a636b0ae"
+    },
+    {
+      "path": "app.tsx",
+      "hash": "502a88d08461475d5f5cb877d63e3ac6509af5acd6287d6d56fb86d12c1f9cdd"
+    },
+    {
+      "path": "assets/fonts/QurovaDEMO-Bold.otf",
+      "hash": "eee0060974ec2e8a0104de435181d337584d10bc295597e4c16ad1bc2af497b8"
+    },
+    {
+      "path": "assets/fonts/QurovaDEMO-Light.otf",
+      "hash": "8bfc4608ab71740ea6b4e46c48749d5cd8802e0b1ea106855fee026b88a8fce2"
+    },
+    {
+      "path": "assets/fonts/QurovaDEMO-Medium.otf",
+      "hash": "26013c9a4818e2129275e3eb75d0f1047b2cf983c48f08de385b51411e075cac"
+    },
+    {
+      "path": "assets/fonts/QurovaDEMO-Regular.otf",
+      "hash": "86061231b74627f0273bfece39c10565d2a096831e82c69ef99fc6cb185069f1"
+    },
+    {
+      "path": "assets/fonts/QurovaDEMO-SemiBold.otf",
+      "hash": "dfc4e2c14394d714edc3acd15a1786d51d5d051fc34ddb37a3fab0e2ab8ae909"
+    },
+    {
+      "path": "components/ui/magnetic-button.tsx",
+      "hash": "2ed97aa7346e68f985aa1a6b95edcda0564f2988d2541b4f48bb4ad3fee18d73"
+    },
+    {
+      "path": "components/ui/project-card.tsx",
+      "hash": "7e79e36819e85ab32d5a3fa9c467d73b4acd184b6c1311ba106cbeaa872c0852"
+    },
+    {
+      "path": "components/ui/robot-hero.tsx",
+      "hash": "81b23db40193d56bff28b1802233da32bcd98b4d92935cbba73bec0cd363c0ef"
+    },
+    {
+      "path": "components/ui/router-link.tsx",
+      "hash": "f1dee30dcf7180f2bf115ac2581dcd7b67287492601e065496692aace9fa9978"
+    },
+    {
+      "path": "components/ui/scroll-reveal.tsx",
+      "hash": "5cac46b0f6c4a3f9d3f7b86884eae353ecdf38a0878d8bd0aac70f519abeb262"
+    },
+    {
+      "path": "components/ui/service-row.tsx",
+      "hash": "76a5901f81350308d2d4e6393e48090e82011a49295f77c5fdb39279e544e886"
+    },
+    {
+      "path": "components/ui/site.tsx",
+      "hash": "b9870b778cdd411d775580f561efaeea0070ca0840000d8497e8f0a0df67a350"
+    },
+    {
+      "path": "contact/index.html",
+      "hash": "c4716bc0de3ead60fab7d2b30051447f935bb0392dbbf4fa3db4592443aea202"
+    },
+    {
+      "path": "demo.tsx",
+      "hash": "66d6fe416bcebfe1fa7a5b30e91fcaa85e356dbaf62932eb49bb53fae4c4e7e5"
+    },
+    {
+      "path": "index.html",
+      "hash": "301e42e8aed940865b000ef72a41331278f46841275d80500be75d9d3c94f279"
+    },
+    {
+      "path": "notes/index.html",
+      "hash": "c6f3f71a4fe09b74efdcde93d42c8cfcc504cf83a9aee8371b8d4224a51c8ef1"
+    },
+    {
+      "path": "sfx/ui-click.wav",
+      "hash": "060d9aaadb147b7bcaf93cfdbcaba13aa5af0aef998e0980299f56f8d4c6a549"
+    },
+    {
+      "path": "sfx/ui-hover.wav",
+      "hash": "6acf5f421e56f610f6591748591780f8ef519ca0583ca3c19ae3c25feff6b802"
+    },
+    {
+      "path": "styles.css",
+      "hash": "433b8c0e13eff19e831b7cb74a8e3758358555e0dbcede6469a49ab2af2d7b7a"
+    },
+    {
+      "path": "tools/index.html",
+      "hash": "722ffce4341b2af23cdd1d738098199ef66ccd10aab5b823191d63a251ca555b"
+    },
+    {
+      "path": "uploads/ChatGPT_Image_20_ao_t_2026__20_06_17.png",
+      "hash": "296a868d830abfde2985779377a1425163cd517765541bc906de2ad36a9e218c"
+    },
+    {
+      "path": "uploads/qurova-demo.zip",
+      "hash": "bb02cacf4b6d11eef935903f11c7451672b5a8791939f4a54b82a3e5a0b915c7"
+    }
+  ]
+}
