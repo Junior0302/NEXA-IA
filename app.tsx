@@ -1,7 +1,17 @@
 import { StrictMode, useEffect, useRef, useState, type CSSProperties, type FormEvent, type ReactNode } from "react";
 import { createRoot } from "react-dom/client";
+import { RobotScene } from "./components/ui/robot-hero.tsx";
 import { CustomCursor, Footer, FullscreenMenu, Header, InteractionSounds, LoadingScreen, PageTransition } from "./components/ui/site.tsx";
 import { Link } from "./components/ui/router-link.tsx";
+
+const robotSettings = {
+  color: "#d5d9e4",
+  scale: 1.15,
+  pantallaColor: "#c9ff45",
+  pantallaBrillo: 1.25,
+  blinkCycle: 3.8,
+  metalness: 0.15,
+};
 
 const toolsets = [
   { number: "01", name: "DISCUTER / RÉFLÉCHIR", detail: "Systèmes de prompts, méthodes de raisonnement et conversations plus riches.", tags: ["ChatGPT", "Claude", "Perplexity"], tone: "lime" },
@@ -46,7 +56,8 @@ function HomePage() {
         <Reveal className="hero-lead" delay={160}><p>Une pensée claire pour un monde en mouvement.<br />Outils, systèmes et signaux pour celles et ceux qui construisent.</p></Reveal>
         <Reveal className="hero-action" delay={220}><Link to="/tools" className="lime-button" data-cursor="EXPLORER">Explorer la boîte à outils <span>↗</span></Link></Reveal>
       </div>
-      <div className="hero-mark" aria-hidden="true"><span>IA</span></div>
+      <div className="hero-visual" role="img" aria-label="Robot NEXA"><RobotScene {...robotSettings} /></div>
+      <div className="scroll-cue" aria-hidden="true"><span>SCROLL</span><i /></div>
     </section>
 
     <section className="manifesto content-wrap section-space">
